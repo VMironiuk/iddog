@@ -1,0 +1,20 @@
+PODS:
+  - MBCircularProgressBar (0.3.5)
+  - TableViewReloadAnimation (0.0.5)
+
+DEPENDENCIES:
+  - MBCircularProgressBar
+  - TableViewReloadAnimation (~> 0.0.5)
+
+SPEC REPOS:
+  trunk:
+    - MBCircularProgressBar
+    - TableViewReloadAnimation
+
+SPEC CHECKSUMS:
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
+  TableViewReloadAnimation: f3a4c4048efbc56331be98075f26a2e533a14c16
+
+PODFILE CHECKSUM: b0b7e52d9c7fd4a377f61563ba338847d4ea3630
+
+COCOAPODS: 1.8.4
