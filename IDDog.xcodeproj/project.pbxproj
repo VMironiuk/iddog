@@ -19,7 +19,7 @@
 		8068F1D22401696100C28DA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8068F1D02401696100C28DA8 /* LaunchScreen.storyboard */; };
 		8068F1DD2401696200C28DA8 /* IDDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068F1DC2401696200C28DA8 /* IDDogTests.swift */; };
 		8068F1E82401696200C28DA8 /* IDDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068F1E72401696200C28DA8 /* IDDogUITests.swift */; };
-		8084E2792408361100EDAD8C /* DogBreedsImageClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8084E2782408361100EDAD8C /* DogBreedsImageClassifier.mlmodel */; };
+		8077632C2507DC2100FF5466 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8077632B2507DC2000FF5466 /* Inceptionv3.mlmodel */; };
 		80922BB8240EEB4200A8CD28 /* DogBreedRecognizerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80922BB7240EEB4200A8CD28 /* DogBreedRecognizerError.swift */; };
 		80922BBA240EEE9400A8CD28 /* DogBreedDetailsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80922BB9240EEE9400A8CD28 /* DogBreedDetailsManager.swift */; };
 		80CC059D24374D0400E253D8 /* BreedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CC059C24374D0400E253D8 /* BreedDetailsViewController.swift */; };
@@ -69,7 +69,7 @@
 		8068F1E32401696200C28DA8 /* IDDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IDDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8068F1E72401696200C28DA8 /* IDDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDDogUITests.swift; sourceTree = "<group>"; };
 		8068F1E92401696200C28DA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8084E2782408361100EDAD8C /* DogBreedsImageClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DogBreedsImageClassifier.mlmodel; sourceTree = "<group>"; };
+		8077632B2507DC2000FF5466 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		80922BB7240EEB4200A8CD28 /* DogBreedRecognizerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedRecognizerError.swift; sourceTree = "<group>"; };
 		80922BB9240EEE9400A8CD28 /* DogBreedDetailsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailsManager.swift; sourceTree = "<group>"; };
 		80CC059C24374D0400E253D8 /* BreedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		8068F1F724016A0800C28DA8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8084E2782408361100EDAD8C /* DogBreedsImageClassifier.mlmodel */,
+				8077632B2507DC2000FF5466 /* Inceptionv3.mlmodel */,
 				8066F1902409878600619C14 /* DogBreedDetail.swift */,
 				80922BB9240EEE9400A8CD28 /* DogBreedDetailsManager.swift */,
 				80922BB7240EEB4200A8CD28 /* DogBreedRecognizerError.swift */,
@@ -460,13 +460,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8066F1912409878600619C14 /* DogBreedDetail.swift in Sources */,
+				8077632C2507DC2100FF5466 /* Inceptionv3.mlmodel in Sources */,
 				8068F1CA2401696000C28DA8 /* MainViewController.swift in Sources */,
 				8068F1C62401696000C28DA8 /* AppDelegate.swift in Sources */,
 				80922BBA240EEE9400A8CD28 /* DogBreedDetailsManager.swift in Sources */,
 				80CC059D24374D0400E253D8 /* BreedDetailsViewController.swift in Sources */,
 				8068F1C82401696000C28DA8 /* SceneDelegate.swift in Sources */,
 				8066F193240987E300619C14 /* DogBreedRecognizer.swift in Sources */,
-				8084E2792408361100EDAD8C /* DogBreedsImageClassifier.mlmodel in Sources */,
 				80CC05A024375A2C00E253D8 /* DogBreedTableViewCell.swift in Sources */,
 				80922BB8240EEB4200A8CD28 /* DogBreedRecognizerError.swift in Sources */,
 				8066F18F240976CF00619C14 /* Constants.swift in Sources */,

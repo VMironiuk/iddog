@@ -39,7 +39,7 @@ struct DogBreedRecognizer {
   
   func detect(image: CIImage) {
     // Load the model
-    guard let model = try? VNCoreMLModel(for: DogBreedsImageClassifier().model) else {
+    guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
       self.postCommonError()
       return
     }
