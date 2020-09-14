@@ -137,6 +137,9 @@ struct DogBreedDetailsManager {
   // MARK: - Public
   
   func dogBreedDetail(byKey key: String) -> DogBreedDetail? {
+    guard let key = K.DogBreedKey(rawValue: key) else {
+      return nil
+    }
     return self.dogBreedDetails[key]
   }
 }

@@ -59,12 +59,17 @@ struct DogBreedRecognizer {
       var breedDetails = [DogBreedDetail]()
       
       for result in results {
-        if result.confidence < self.minConfidence {
-          break
-        }
-        
-        let key = result.identifier
-        if var breedDetail = self.dogBreedDetailsManager.dogBreedDetail(byKey: key) {
+        let keys = result.identifier.components(separatedBy: ", ")
+        for key in keys {
+          let key = key.lowercased()
+          
+          guard K.availableDogBreeds.contains(key),
+            self.minConfidence < result.confidence,
+            var breedDetail = self.dogBreedDetailsManager.dogBreedDetail(byKey: String(key))
+            else {
+              continue
+          }
+          
           breedDetail.confidence = result.confidence
           breedDetails.append(breedDetail)
         }
