@@ -9,6 +9,10 @@
 import UIKit
 import TableViewReloadAnimation
 
+fileprivate enum State {
+  case ready, processing, list
+}
+
 class MainViewController: UIViewController {
   
   // MARK: - Properties
@@ -24,6 +28,19 @@ class MainViewController: UIViewController {
   private var currentDogBreedDetail: DogBreedDetail?
   private var breedDetails = [DogBreedDetail]()
   
+  private var state: State = .ready {
+    didSet {
+      switch self.state {
+      case .ready:
+        self.stateReady()
+      case .processing:
+        self.stateProcessing()
+      case .list:
+        self.stateList()
+      }
+    }
+  }
+  
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
@@ -31,11 +48,7 @@ class MainViewController: UIViewController {
     self.setupGalleryImagePicker()
     self.setupCameraImagePicker()
     self.setupTableView()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    self.activityIndicator.stopAnimating()
+    self.state = .ready
   }
   
   // MARK: - Navigation
@@ -80,16 +93,30 @@ class MainViewController: UIViewController {
       forCellReuseIdentifier: K.Cell.dogBreedCell)
   }
   
+  private func stateReady() {
+    self.placeholderLabel.text = "No Image to Recognize"
+    self.placeholderLabel.isHidden = false
+    self.activityIndicator.stopAnimating()
+  }
+  
+  private func stateProcessing() {
+    self.placeholderLabel.text = "Image processing..."
+    self.placeholderLabel.isHidden = false
+    self.activityIndicator.startAnimating()
+  }
+  
+  private func stateList() {
+    self.placeholderLabel.isHidden = true
+    self.activityIndicator.stopAnimating()
+    self.tableView.reloadData(
+      with: .simple(duration: 0.75, direction: .rotation3D(type: .daredevil), constantDelay: 0))
+  }
+  
   private func presentAlert(message: String) {
     let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     alert.addAction(action)
     self.present(alert, animated: true, completion: nil)
-  }
-  
-  private func setUIToDefault() {
-    self.placeholderLabel.text = "No Image to Recognize"
-    self.placeholderLabel.isHidden = false
   }
 }
 
@@ -102,14 +129,14 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
   {
     // Pick the image
     guard let pickedImage = info[.originalImage] as? UIImage else {
-      self.setUIToDefault()
+      self.state = .ready
       self.presentAlert(message: "Couldn't pick the image")
       return
     }
     
     // Convert the picked image to CIImage type
     guard let ciImage = CIImage(image: pickedImage) else {
-      self.setUIToDefault()
+      self.state = .ready
       self.presentAlert(message: "Couldn't convert the picked image")
       return
     }
@@ -117,22 +144,16 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
     // Try to detect the image
     picker.dismiss(animated: true) {
       let operation = DogBreedRecognizeOperation(image: ciImage)
-      self.activityIndicator.startAnimating()
-      self.placeholderLabel.text = "Processing image..."
+      self.state = .processing
       operation.completionBlock = {
         DispatchQueue.main.async { [weak self] in
           guard let self = self else { return }
-          #warning("Move to a separate method")
-          self.activityIndicator.stopAnimating()
           self.breedDetails = operation.dogBreedDetails
           if self.breedDetails.isEmpty {
-            self.setUIToDefault()
+            self.state = .ready
             self.presentAlert(message: "Couldn't recognize a dog breed")
           } else {
-            self.placeholderLabel.isHidden = true
-            self.tableView.reloadData(
-              with: .simple(duration: 0.75, direction: .rotation3D(type: .daredevil),
-                            constantDelay: 0))
+            self.state = .list
           }
         }
       }
