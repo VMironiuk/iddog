@@ -18,8 +18,8 @@ class MainViewController: UIViewController {
   
   private let galleryImagePicker = UIImagePickerController()
   private let cameraImagePicker = UIImagePickerController()
+  private let queue = OperationQueue()
   
-  private var dogBreedRecognizer = DogBreedRecognizer()
   private var currentDogBreedDetail: DogBreedDetail?
   private var breedDetails = [DogBreedDetail]()
   
@@ -30,8 +30,6 @@ class MainViewController: UIViewController {
     self.setupGalleryImagePicker()
     self.setupCameraImagePicker()
     self.setupTableView()
-    
-    self.dogBreedRecognizer.delegate = self
   }
   
   // MARK: - Navigation
@@ -111,30 +109,25 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
     
     // Try to detect the image
     picker.dismiss(animated: true) {
-      self.dogBreedRecognizer.detect(image: ciImage)
+      let operation = DogBreedRecognizeOperation(image: ciImage)
+      operation.completionBlock = {
+        DispatchQueue.main.async { [weak self] in
+          guard let self = self else { return }
+          #warning("Move to a separate method")
+          self.breedDetails = operation.dogBreedDetails
+          if self.breedDetails.isEmpty {
+            self.setUIToDefault()
+            self.presentAlert(message: "Couldn't recognize a dog breed")
+          } else {
+            self.placeholderLabel.isHidden = true
+            self.tableView.reloadData(
+              with: .simple(duration: 0.75, direction: .rotation3D(type: .daredevil),
+                            constantDelay: 0))
+          }
+        }
+      }
+      self.queue.addOperation(operation)
     }
-  }
-}
-
-// MARK: - DogBreedRecognizerDelegate
-
-extension MainViewController: DogBreedRecognizerDelegate {
-  func dogBreedRecognizer(
-    _ recognizer: DogBreedRecognizer,
-    didFinishDetectBreedWithDetails dogBreedDetails: [DogBreedDetail])
-  {
-    self.breedDetails = dogBreedDetails
-    self.placeholderLabel.isHidden = true
-    self.tableView.reloadData(
-      with: .simple(duration: 0.75, direction: .rotation3D(type: .daredevil), constantDelay: 0))
-  }
-  
-  func dogBreedRecognizer(
-    _ recognizer: DogBreedRecognizer,
-    didFinishDetectBreedWithError error: Error)
-  {
-    self.setUIToDefault()
-    self.presentAlert(message: (error as! DogBreedRecognizerError).description)
   }
 }
 
