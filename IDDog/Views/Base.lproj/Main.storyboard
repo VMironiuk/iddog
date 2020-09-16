@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ntQ-Cd-sD4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ntQ-Cd-sD4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,9 +26,14 @@
                                 <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="zb3-hs-H2O">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="zb3-hs-H2O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CrW-IT-ACl"/>
+                            <constraint firstItem="zb3-hs-H2O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dth-2m-Ij7"/>
                             <constraint firstItem="qXL-4k-QS6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sbg-Zj-Vd0"/>
                             <constraint firstItem="9TW-1M-D7f" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aOC-ip-JA1"/>
                             <constraint firstItem="qXL-4k-QS6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dq6-zo-yE4"/>
@@ -53,6 +58,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="zb3-hs-H2O" id="Bde-Ru-VRG"/>
                         <outlet property="placeholderLabel" destination="9TW-1M-D7f" id="6ys-Hd-rMF"/>
                         <outlet property="tableView" destination="qXL-4k-QS6" id="gHU-nj-c0M"/>
                         <segue destination="W2s-DJ-Zz4" kind="show" identifier="MainVC2BreedDetailsVC" id="kM6-R2-ucF"/>
@@ -216,9 +222,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="chevron.left" catalog="system" width="48" height="64"/>
-        <image name="chevron.right" catalog="system" width="48" height="64"/>
-        <image name="photo" catalog="system" width="64" height="46"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
     </resources>
 </document>

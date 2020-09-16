@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
   
   @IBOutlet private weak var tableView: UITableView!
   @IBOutlet private weak var placeholderLabel: UILabel!
+  @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   
   private let galleryImagePicker = UIImagePickerController()
   private let cameraImagePicker = UIImagePickerController()
@@ -30,6 +31,11 @@ class MainViewController: UIViewController {
     self.setupGalleryImagePicker()
     self.setupCameraImagePicker()
     self.setupTableView()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.activityIndicator.stopAnimating()
   }
   
   // MARK: - Navigation
@@ -82,6 +88,7 @@ class MainViewController: UIViewController {
   }
   
   private func setUIToDefault() {
+    self.placeholderLabel.text = "No Image to Recognize"
     self.placeholderLabel.isHidden = false
   }
 }
@@ -110,10 +117,13 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
     // Try to detect the image
     picker.dismiss(animated: true) {
       let operation = DogBreedRecognizeOperation(image: ciImage)
+      self.activityIndicator.startAnimating()
+      self.placeholderLabel.text = "Processing image..."
       operation.completionBlock = {
         DispatchQueue.main.async { [weak self] in
           guard let self = self else { return }
           #warning("Move to a separate method")
+          self.activityIndicator.stopAnimating()
           self.breedDetails = operation.dogBreedDetails
           if self.breedDetails.isEmpty {
             self.setUIToDefault()
