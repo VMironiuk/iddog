@@ -50,25 +50,7 @@ class DogBreedRecognizeOperation: AsyncOperation {
           return
         }
         
-        self.dogBreedDetails.removeAll()
-        
-        #warning("Improve it")
-        for result in results {
-          let keys = result.identifier.components(separatedBy: ", ")
-          for key in keys {
-            let key = key.lowercased()
-            
-            guard K.availableDogBreeds.contains(key),
-              self.minConfidence < result.confidence,
-              var breedDetail = self.dogBreedDetailsManager.dogBreedDetail(forKey: String(key))
-              else {
-                continue
-            }
-            
-            breedDetail.confidence = result.confidence
-            self.dogBreedDetails.append(breedDetail)
-          }
-        }
+        self.handleResults(results)
       }
       
       // Perform the request
@@ -77,6 +59,25 @@ class DogBreedRecognizeOperation: AsyncOperation {
         try handler.perform([request])
       } catch {
         print("Cannot handle the request")
+      }
+    }
+  }
+  
+  // MARK: - Private
+  
+  private func handleResults(_ results: [VNClassificationObservation]) {
+    self.dogBreedDetails.removeAll()
+    
+    results.forEach { result in
+      let keys = result.identifier.components(separatedBy: ", ")
+      keys.forEach { key in
+        let key = key.lowercased()
+        if K.availableDogBreeds.contains(key) && self.minConfidence < result.confidence {
+          if var breedDetail = self.dogBreedDetailsManager.dogBreedDetail(forKey: String(key)) {
+            breedDetail.confidence = result.confidence
+            self.dogBreedDetails.append(breedDetail)
+          }
+        }
       }
     }
   }
