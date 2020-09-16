@@ -14,10 +14,6 @@ import Vision
 protocol DogBreedRecognizerDelegate {
   func dogBreedRecognizer(
     _ recognizer: DogBreedRecognizer,
-    didFinishDetectBreedWithDetaiil dogBreedDetaiil: DogBreedDetail)
-  
-  func dogBreedRecognizer(
-    _ recognizer: DogBreedRecognizer,
     didFinishDetectBreedWithDetails dogBreedDetails: [DogBreedDetail])
   
   func dogBreedRecognizer(

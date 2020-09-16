@@ -121,12 +121,6 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
 extension MainViewController: DogBreedRecognizerDelegate {
   func dogBreedRecognizer(
     _ recognizer: DogBreedRecognizer,
-    didFinishDetectBreedWithDetaiil dogBreedDetaiil: DogBreedDetail)
-  {
-  }
-  
-  func dogBreedRecognizer(
-    _ recognizer: DogBreedRecognizer,
     didFinishDetectBreedWithDetails dogBreedDetails: [DogBreedDetail])
   {
     self.breedDetails = dogBreedDetails
