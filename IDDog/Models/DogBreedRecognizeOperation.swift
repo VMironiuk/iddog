@@ -33,11 +33,12 @@ class DogBreedRecognizeOperation: AsyncOperation {
       defer { self.state = .finished }
       
       // Load the model
-      guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
+      guard let inceptionv3 = try? Inceptionv3(configuration: MLModelConfiguration()),
+            let model = try? VNCoreMLModel(for: inceptionv3.model) else {
         print("Cannot load the model")
         return
       }
-      
+
       // Make the request
       let request = VNCoreMLRequest(model: model) { (request, error) in
         if error != nil {
