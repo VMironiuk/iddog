@@ -88,23 +88,23 @@
 		26F708074D8298F5297D08BFADB7A77B /* Pods-IDDogTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDDogTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		28A480090D98935555ACE6AA620BED32 /* Pods-IDDog-IDDogUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-IDDog-IDDogUITests-frameworks.sh"; sourceTree = "<group>"; };
 		2E2054298F9D7A6F79FC5AF1462D19EA /* Pods-IDDog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IDDog.modulemap"; sourceTree = "<group>"; };
-		312C6002C075EBF30C39ED33D460C6CA /* Pods_IDDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IDDog.framework; path = "Pods-IDDog.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		312C6002C075EBF30C39ED33D460C6CA /* Pods_IDDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3195BE4D6A529AD5479DFBFD67FED002 /* example.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = example.png; path = Pod/Assets/example.png; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3911600F6BEC14D48ADA3EDC4689FACA /* Pods_IDDogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IDDogTests.framework; path = "Pods-IDDogTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3911600F6BEC14D48ADA3EDC4689FACA /* Pods_IDDogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDDogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AD7F3D75C0DD564E27DA1B4068CFEF /* Pods-IDDog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IDDog-umbrella.h"; sourceTree = "<group>"; };
 		41B5C80662CF788553462D4DC02DF2D7 /* MBCircularProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBCircularProgressBar-prefix.pch"; sourceTree = "<group>"; };
 		4F3662B2B9D23088D05993946FA3D714 /* Pods-IDDog-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDDog-acknowledgements.plist"; sourceTree = "<group>"; };
 		52C9DA25CA843540A84FB76DD09DD8A1 /* TableViewReloadAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TableViewReloadAnimation-dummy.m"; sourceTree = "<group>"; };
 		561CFC64B482A59BBD052F5F880F44CD /* Pods-IDDog-IDDogUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IDDog-IDDogUITests-umbrella.h"; sourceTree = "<group>"; };
 		596EAD5A4D4DEA07F2D0A903E88FDE01 /* MBCircularProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBCircularProgressBar-dummy.m"; sourceTree = "<group>"; };
-		640B2CA36D53D84D0129B12A7FAC2E0B /* MBCircularProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBCircularProgressBar.framework; path = MBCircularProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640B2CA36D53D84D0129B12A7FAC2E0B /* MBCircularProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBCircularProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6901F7711EB8EAF5A0433B2211EAAD1C /* TableViewReloadAnimation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TableViewReloadAnimation-Info.plist"; sourceTree = "<group>"; };
 		77F1D27896A5D9FC7D01D41B18769B0A /* Pods-IDDogTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IDDogTests-umbrella.h"; sourceTree = "<group>"; };
-		79DE3C56ED6178E7BFD24AE8FDC2C413 /* TableViewReloadAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TableViewReloadAnimation.framework; path = TableViewReloadAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79DE3C56ED6178E7BFD24AE8FDC2C413 /* TableViewReloadAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TableViewReloadAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A141A6FFB33F217D5242BFA7E8E93C0 /* Pods-IDDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDDog.debug.xcconfig"; sourceTree = "<group>"; };
 		7BAAE73F692F61DF13E5DF27EA72CEAF /* TableViewReloadAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TableViewReloadAnimation-umbrella.h"; sourceTree = "<group>"; };
-		7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MBCircularProgressBar.bundle; path = "MBCircularProgressBar-MBCircularProgressBar.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB12AE789452060456EBCEC68360820 /* MBCircularProgressBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBCircularProgressBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		80129904E62EB0F73971619E4DAB1ACB /* ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist"; sourceTree = "<group>"; };
 		84BE10AC04A4EFBB34EE0EC993111675 /* MBCircularProgressBarLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarLayer.m; path = Pod/Classes/MBCircularProgressBarLayer.m; sourceTree = "<group>"; };
 		8C50D1E9AE57B1ABED62EC37A9C3B1FA /* Pods-IDDog-IDDogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDDog-IDDogUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,11 +114,11 @@
 		94E4C43AE5412CF2F37316E29093A3FF /* MBCircularProgressBarView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MBCircularProgressBarView.m; path = Pod/Classes/MBCircularProgressBarView.m; sourceTree = "<group>"; };
 		96BCD302924B30E809EDEF47A1EE1844 /* Pods-IDDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDDog.release.xcconfig"; sourceTree = "<group>"; };
 		98D3877242B17A7D7588008FB2057270 /* Pods-IDDog-IDDogUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDDog-IDDogUITests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A28AF19FC5B7195DE171C18DCFB43140 /* Pods-IDDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IDDogTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2EB182C3504262D64CF0F428D254D4C /* Pods-IDDog-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IDDog-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A4C549574096F8DBC0D7A4778B95590B /* Pods-IDDog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IDDog-Info.plist"; sourceTree = "<group>"; };
-		A88AB23FCFC2E6E7FCE26A0DCDF9A305 /* Pods_IDDog_IDDogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IDDog_IDDogUITests.framework; path = "Pods-IDDog-IDDogUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A88AB23FCFC2E6E7FCE26A0DCDF9A305 /* Pods_IDDog_IDDogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDDog_IDDogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE960CF9B16ED3C4AF3833428294D134 /* MBCircularProgressBarLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MBCircularProgressBarLayer.h; path = Pod/Classes/MBCircularProgressBarLayer.h; sourceTree = "<group>"; };
 		B3163BFD440FD75540E50DAA58B2A6F5 /* MBCircularProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBCircularProgressBar.modulemap; sourceTree = "<group>"; };
 		B8F3058703714D9496C165415DFC0C36 /* Pods-IDDogTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IDDogTests.modulemap"; sourceTree = "<group>"; };
@@ -206,7 +206,6 @@
 				80BF1C36FF39784EAA6F6A954EA48B70 /* Resources */,
 				C1B8EF958AFBAA37E7762FEBC44FD5EF /* Support Files */,
 			);
-			name = MBCircularProgressBar;
 			path = MBCircularProgressBar;
 			sourceTree = "<group>";
 		};
@@ -316,7 +315,6 @@
 				8E49933BB87EEAFBED7F77EF27797AED /* UITableView+Extension.swift */,
 				68983E0AB497EFD74E557E3D4B0797E5 /* Support Files */,
 			);
-			name = TableViewReloadAnimation;
 			path = TableViewReloadAnimation;
 			sourceTree = "<group>";
 		};
@@ -521,7 +519,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -702,7 +700,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TableViewReloadAnimation/TableViewReloadAnimation-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TableViewReloadAnimation/TableViewReloadAnimation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -738,7 +736,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCircularProgressBar/MBCircularProgressBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/MBCircularProgressBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -842,7 +840,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MBCircularProgressBar";
 				IBSC_MODULE = MBCircularProgressBar;
 				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = MBCircularProgressBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -859,7 +857,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/MBCircularProgressBar";
 				IBSC_MODULE = MBCircularProgressBar;
 				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/ResourceBundle-MBCircularProgressBar-MBCircularProgressBar-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = MBCircularProgressBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -894,6 +892,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -987,7 +986,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TableViewReloadAnimation/TableViewReloadAnimation-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TableViewReloadAnimation/TableViewReloadAnimation-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1070,6 +1069,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1197,7 +1197,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MBCircularProgressBar/MBCircularProgressBar-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MBCircularProgressBar/MBCircularProgressBar-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
