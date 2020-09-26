@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>Please enable IDDog to access your camera roll in order to use an image to recognize</string>
+	<string>Please enable IDDog to access your camera in order to use an image to recognize</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Please enable IDDog to access your photo library in order to use an image to recognize</string>
 	<key>UIApplicationSceneManifest</key>
