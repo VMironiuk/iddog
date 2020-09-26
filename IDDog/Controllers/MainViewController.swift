@@ -112,8 +112,8 @@ class MainViewController: UIViewController {
       with: .simple(duration: 0.75, direction: .rotation3D(type: .daredevil), constantDelay: 0))
   }
   
-  private func presentAlert(message: String) {
-    let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+    private func presentAlert(title: String, message: String) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     alert.addAction(action)
     self.present(alert, animated: true, completion: nil)
@@ -130,14 +130,14 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
     // Pick the image
     guard let pickedImage = info[.originalImage] as? UIImage else {
       self.state = .ready
-      self.presentAlert(message: "Couldn't pick the image")
+        self.presentAlert(title: "Error", message: "Couldn't pick the image")
       return
     }
     
     // Convert the picked image to CIImage type
     guard let ciImage = CIImage(image: pickedImage) else {
       self.state = .ready
-      self.presentAlert(message: "Couldn't convert the picked image")
+        self.presentAlert(title: "Error", message: "Couldn't convert the picked image")
       return
     }
     
@@ -151,7 +151,8 @@ extension MainViewController: UINavigationControllerDelegate, UIImagePickerContr
           self.breedDetails = operation.dogBreedDetails
           if self.breedDetails.isEmpty {
             self.state = .ready
-            self.presentAlert(message: "Couldn't recognize a dog breed")
+            self.presentAlert(title: "Couldn't recognize a dog breed",
+                              message: "Probably, there is no a dog on the image :]")
           } else {
             self.state = .list
           }
