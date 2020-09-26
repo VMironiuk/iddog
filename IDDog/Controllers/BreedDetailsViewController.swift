@@ -63,6 +63,15 @@ class BreedDetailsViewController: UIViewController {
     self.forwardButton.isEnabled = self.webView.canGoForward
     self.forwardButton.tintColor = self.webView.canGoForward ? .link : .systemGray
   }
+    
+  private func updateConfidenceValue() {
+    guard let breedDetail = self.dogBreedDetail else {
+      return
+    }
+    
+    let confidence: CGFloat = CGFloat(breedDetail.confidence * 100)
+    self.updateConfidenceView(confidence: confidence)
+  }
   
   private func updateConfidenceView(confidence: CGFloat) {
     UIView.animate(withDuration: 1.0) {
@@ -84,9 +93,6 @@ class BreedDetailsViewController: UIViewController {
     // Load wiki page
     let request = URLRequest(url: url)
     self.webView.load(request)
-    // Update the confidence value
-    let confidence: CGFloat = CGFloat(breedDetail.confidence * 100)
-    self.updateConfidenceView(confidence: confidence)
   }
   
   private func presentAlert(message: String) {
@@ -103,6 +109,16 @@ extension BreedDetailsViewController: WKNavigationDelegate {
   func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
     self.updateBackwardButton()
     self.updateForwardButton()
+    self.updateConfidenceValue()
+  }
+    
+  func webView(
+    _ webView: WKWebView,
+    didFailProvisionalNavigation navigation: WKNavigation!,
+    withError error: Error)
+  {
+    self.confidenceView.isHidden = true
+    self.presentAlert(message: error.localizedDescription)
   }
 }
 
