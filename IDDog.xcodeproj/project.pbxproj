@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1ECEBD22BCBB1C4BA906458F /* Pods_IDDogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B74F627264EF5DFC9E7DE42 /* Pods_IDDogTests.framework */; };
+		3CC4F120261475D300A64F61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC4F11F261475D300A64F61 /* GoogleService-Info.plist */; };
+		3CC4F121261475D300A64F61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC4F11F261475D300A64F61 /* GoogleService-Info.plist */; };
+		3CC4F122261475D300A64F61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CC4F11F261475D300A64F61 /* GoogleService-Info.plist */; };
 		8066F18F240976CF00619C14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066F18E240976CF00619C14 /* Constants.swift */; };
 		8066F1912409878600619C14 /* DogBreedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8066F1902409878600619C14 /* DogBreedDetail.swift */; };
 		8068F1C62401696000C28DA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068F1C52401696000C28DA8 /* AppDelegate.swift */; };
@@ -49,6 +52,7 @@
 /* Begin PBXFileReference section */
 		15475E05481EDA05B4904449 /* Pods_IDDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15499138EF5A63D7894725A4 /* Pods-IDDogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDDogTests.release.xcconfig"; path = "Target Support Files/Pods-IDDogTests/Pods-IDDogTests.release.xcconfig"; sourceTree = "<group>"; };
+		3CC4F11F261475D300A64F61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		426E48A8039C84563EC1BA6F /* Pods-IDDog-IDDogUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDDog-IDDogUITests.release.xcconfig"; path = "Target Support Files/Pods-IDDog-IDDogUITests/Pods-IDDog-IDDogUITests.release.xcconfig"; sourceTree = "<group>"; };
 		462DF14C8B81A2258A3EBD5A /* Pods-IDDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IDDog.release.xcconfig"; path = "Target Support Files/Pods-IDDog/Pods-IDDog.release.xcconfig"; sourceTree = "<group>"; };
 		6B74F627264EF5DFC9E7DE42 /* Pods_IDDogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IDDogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +156,7 @@
 				8068F1F6240169FB00C28DA8 /* Controllers */,
 				8068F1CE2401696100C28DA8 /* Assets.xcassets */,
 				8068F1D32401696100C28DA8 /* Info.plist */,
+				3CC4F11F261475D300A64F61 /* GoogleService-Info.plist */,
 			);
 			path = IDDog;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 			files = (
 				8068F1D22401696100C28DA8 /* LaunchScreen.storyboard in Resources */,
 				80CC05A124375A2C00E253D8 /* DogBreedTableViewCell.xib in Resources */,
+				3CC4F120261475D300A64F61 /* GoogleService-Info.plist in Resources */,
 				8068F1CF2401696100C28DA8 /* Assets.xcassets in Resources */,
 				8068F1CD2401696000C28DA8 /* Main.storyboard in Resources */,
 			);
@@ -339,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC4F121261475D300A64F61 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +353,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC4F122261475D300A64F61 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,7 +661,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = appiarysolutions.com.IDDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -674,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = appiarysolutions.com.IDDog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
